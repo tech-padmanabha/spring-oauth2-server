@@ -1,4 +1,14 @@
-# Falow the steps
+## An Oaut2 server should supports for
+> Type Of
+  - Authorization Code
+  - Authorization Code w/ PKCE(Proof Key for Code Exchange) work with like single page apps & mobile apps
+  - Resource Owner
+  - Client Credentials
+
+> [!Note]
+> A Authorization Server/provide should suport for all, but some server supports few of them as well
+
+## Falow the steps
 
 send the request first as a `get` method and provide the usename and password
 
