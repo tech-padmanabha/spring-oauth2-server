@@ -9,7 +9,7 @@
 > A Authorization Server/provide should suport for all, but some server supports few of them as well, Get the [OAuth2 Server Meta-data](https://datatracker.ietf.org/doc/html/rfc8414) ,
 > 
 RFC-8414 — OAuth 2.0 Authorization Server Metadata, send get request `curl -X GET http://localhost:9000/.well-known/oauth-authorization-server` 
-Here we'll get the response as json about Authrization server supports, falow the below
+Here we'll get the response as json about Authrization server metadata, falow the below
 ```json
 {
   "issuer": "http://localhost:9000",
@@ -59,6 +59,7 @@ Here we'll get the response as json about Authrization server supports, falow th
   "tls_client_certificate_bound_access_tokens": true
 }
 ```
+Or for getting the details about OIDC Provide Configuratin we can send the request to `http://localhost:9000/.well-known/openid-configuration`
 From this response, we can see that both authorization endpoint and token endpoint are readily available.
 
 ## What Spring-OAuth2 authorization server provide 
@@ -94,3 +95,5 @@ code=INF83WnU3DNVf8QBrtmzh4p9n61YrpKnEDDbyy3JZZL9845T_KPn_YQ6A1-c7JNYSkoNpNlhRAn
 redirect_uri=http://127.0.0.1:8080/login/oauth2/code/oidc-client
 ```
 then send the request then we will get (access_token, refresh_token, scope, id_token, token_type, expire_in)
+
+We can work with spring oauth2 server, but i recomand you for production we should use [OCTA](https://www.oauth.com/playground/index.html)
